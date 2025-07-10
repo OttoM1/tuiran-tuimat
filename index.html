@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta theme="#000000" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Beginner Caddie V1</title>
+  
+  <link rel="stylesheet" href="stylescaddy.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+
+
+
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+  const content = document.querySelector(".poks-content");
+  requestAnimationFrame(() => {
+    content.classList.add("fade-in");
+  });
+});
+</script>
+
+
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const content = document.querySelector(".poks-content");
+    const homBtn = document.getElementById("hom");
+  
+    requestAnimationFrame(() => {
+      content.classList.add("fade-in");
+    });
+  
+    startBtn?.addEventListener("click", () => {
+      content.classList.remove("fade-in");
+      content.classList.add("fade-out");
+  
+      setTimeout(() => {
+        document.getElementById("poks").style.display = "none";
+      }, 600);
+    });
+  
+    homBtn?.addEventListener("click", () => {
+      const poks = document.getElementById("poks");
+  
+      poks.style.display = "flex";
+  
+      content.classList.remove("fade-out");
+            void content.offsetWidth;
+  
+      content.classList.add("fade-in");
+    });
+  });
+  </script>
+
+
+</head>
+
+<body>
+
+<!-- 
+
+<div id="alku">
+<div id="div1"> </div>
+<div id="div2"> </div>
+<div id="div3"> </div>
+<div id="div4"> </div>
+<div id="div5"> </div>
+</div>    
+-->
+
+<section id="poks">
+
+
+  <div class="poks-content">
+
+
+<div id="div1" style="pointer-events: all;" onclick="window.location.href='index2.html'"> <p>Tuiran Tuimat</p></div>
+<div id="div2" onclick="window.location.href='tuotteet.html'"> <p>Tuotteet</p></div>
+<div id="div3" onclick="window.location.href='esittely.html'"> <p>Tiimi</p></div>
+<div id="div4" > <p>Liity</p></div>
+<div id="div5" > <p>Ota yhteyttä</p></div>
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+<script>
+    function ShowSection(url) {
+      window.location.href = url;
+    }
+  </script>
+
+
+
+
+<script>
+  function scrollToTop(elementId) {
+  const element = document.getElementById(elementId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' }); 
+  }
+}
+</script>
+
+
+  <script>
+    function navigateToSection(url) {
+      window.location.href = url;
+    }
+  </script>
+
+
+<script>
+  function showSection(sectionId) {
+  console.log("Showing section:", sectionId);
+  document.querySelectorAll("section").forEach(s => s.style.display = "none");
+  const sec = document.getElementById(sectionId);
+  if (sec) sec.style.display = "flex";
+}
+</script>
